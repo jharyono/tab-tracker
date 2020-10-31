@@ -1,9 +1,11 @@
 <template>
   <v-app>
     <v-card max-width="500px" width="400" class="mt-5 mx-auto">
-      <v-card-title class="pb-0">
-        <h3>Register</h3>
-      </v-card-title>
+      <v-toolbar color="blue-grey darken-2" flat dense dark>
+        <v-card-title>
+          <h3>Login</h3>
+        </v-card-title>
+      </v-toolbar>
       <v-card-text>
         <v-form>
           <v-text-field
@@ -26,7 +28,7 @@
       <v-divider></v-divider>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn @click="register" color="success">Register</v-btn>
+        <v-btn @click="login" color="success">Login</v-btn>
       </v-card-actions>
     </v-card>
   </v-app>
@@ -44,9 +46,9 @@ export default {
     }
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        const response = await AuthenticationService.register({
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })

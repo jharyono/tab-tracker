@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <page-header />
     <v-main>
       <v-container>
         <router-view></router-view>
@@ -9,12 +10,13 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
+import PageHeader from './components/Header'
 
 export default {
   name: 'App',
-
-  components: {},
+  components: {
+    PageHeader
+  },
 
   data: () => ({
     //
