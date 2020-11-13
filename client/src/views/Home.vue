@@ -1,7 +1,7 @@
 <template>
-  <v-app>
-    <h2>This is home page</h2>
-  </v-app>
+  <div>
+    <h2>Welcome to Guitar Tab tracker</h2>
+  </div>
 </template>
 
 <script>
@@ -12,3 +12,5 @@ export default {
   components: {}
 }
 </script>
+
+<style lang="scss" scoped></style>

@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     token: null,
     user: null,
-    isUserLoggedIn: false
+    isUserLoggedIn: false,
+    snackbar: {}
   },
   mutations: {
     setToken(state, token) {
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     },
     setUser(state, user) {
       state.user = user
+    },
+    setSnackbar(state, snackbar) {
+      state.snackbar = snackbar
     }
   },
   actions: {
@@ -29,6 +33,11 @@ export default new Vuex.Store({
     },
     setUser({ commit }, user) {
       commit('setUser', user)
+    },
+    setSnackbar({ commit }, snackbar) {
+      snackbar.showing = true
+      snackbar.color = snackbar.color || 'success'
+      commit('setSnackbar', snackbar)
     }
   }
 })
